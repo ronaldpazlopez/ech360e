@@ -1,0 +1,83 @@
+
+<!-- SRC: https://threejs.org/examples/#webgl_performance
+
+PHOTO: https://raw.githubusercontent.com/mrdoob/three.js/master/examples/textures/2294472375_24a3b8ef46_o.jpg
+-->
+
+<html>
+<head>
+<title> Echecopar 360 </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    
+
+    
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico.ico" />
+        <link rel="stylesheet" href="css/estilo.css">
+</head>
+    
+<body>
+    <audio id="audio" src="audio/clic.mp3" autostart="false" ></audio>
+    
+    <div id="play">
+        <div>
+           <img  id="logo" src="img/logo1.jpg" alt="Girl in a jacket">
+            
+            <button id="startButton" class="noselect" onClick=" PlaySound()">Iniciar recorrido</button>
+        </div>
+    </div> 
+       <div id="preloader"></div>  
+    
+   
+
+<div id="menu" style="display: none" class="noselect">
+    
+    <div class="top">
+        <div id="bt1" class="left" onClick="goButton('btn1')">
+            <div class="titulo"> Lobby  </div>        
+        </div>
+        <div id="bt2" class="center" onClick="goButton('btn2')">
+             <div class="titulo"> Mesa de partes</div> 
+        </div>
+        <div  id="bt3" class="right" onClick="goButton('btn3')">
+             <div class="titulo"> Sala B-Green</div> 
+        </div>
+    </div>
+    
+    <div class="bot">
+       <div id="bt4"  class="left" onClick="goButton('btn4')">
+         <div class="titulo"> Sala de innovación</div>        
+        </div>
+       <div id="bt5"  class="center" onClick="goButton('btn5')">
+            <div  class="titulo"> Sala de reunión</div>        
+        </div>
+    </div>    
+</div>
+    
+ <div id="menusala" style="display: none">  
+<!-- <div id="menusala"> -->
+    <div id="btsala1" class="btncircle" onClick="goButtonSala('btn6')">S1</div>
+    <div id="btsala2" class="btncircle" onClick="goButtonSala('btn7')">S2</div>
+    <div id="btsala3" class="btncircle" onClick="goButtonSala('btn8')">S3</div>
+    <div id="btsala4" class="btncircle" onClick="goButtonSala('btn9')">S4</div>
+</div>
+    
+ <div id="btMenu"  style="display: none"  class="noselect" >
+    <div> <img src="img/btnmenu2.jpg" onClick="muestra_oculta('menu')">   </div>    
+</div>
+    
+  
+    
+    
+    
+    <div id="container"></div>
+
+    
+    <script src="script/isMobile.min.js"></script>   
+    <script src="script/TweenMax.min.js"></script>   
+    <script src="script/EventBus.js"></script>   
+    <script src="script/three.js"></script>   
+    <script src="script/OrbitControls.js"></script>
+    <script src="script/script360.js"></script>
+ </body>
+</html>
